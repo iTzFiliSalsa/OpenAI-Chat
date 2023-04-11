@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.listChat{
+    list-style: none;
+    padding: 0;
+
+    &__item{
+
+        border-radius: .2em;
+        margin-bottom: 16px;
+        transition: background-color 300ms ease;
+
+        &:hover{
+            background-color: $historialBackground;
+        }
+
+        &-url{
+            cursor: pointer;
+            padding: 16px;
+            display: block;
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+.active{
+    background-color: $historialBackground;
+}

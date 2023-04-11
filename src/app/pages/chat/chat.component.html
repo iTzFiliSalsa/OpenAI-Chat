@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <article class="row min-vh-100">
+        <aside class="col-2 group p-3">
+            <app-channels></app-channels>
+        </aside>
+        <section class="col-10 chat p-0">
+            <app-header></app-header>
+            <section class="chat__historial">
+                <ng-container *ngFor="let i of messages">
+                    <div class="chat__historial__item" *ngIf="i.idChannel == _channel.idChannel">
+                        <p class="fw-bold m-0 chat__historial__item-title">{{ i.isEmisor == true ? 'Emisor': 'OpenAI'}} <span class="secondary-text">{{i.date | date: 'dd/MMM/yyyy hh:mm:ss'}}</span></p>
+                        <p class=" chat__historial__item-description">{{i.message}}</p>
+                    </div>
+                </ng-container>
+            </section>
+            <form class="chat__footer" [formGroup]="form">
+                <input autocomplete="off" formControlName="message" type="text" name="message" id="message" class="chat__footer-input" (keyup.enter)="onEnter()">
+            </form>
+        </section>
+    </article>
+</div>

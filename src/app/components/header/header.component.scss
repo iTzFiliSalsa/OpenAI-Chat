@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+nav{
+    height: $navHeight;
+    overflow: hidden;
+    border-bottom: 1px solid $primary;
+    padding-right: 16px;
+    background-color: $primary;
+}
