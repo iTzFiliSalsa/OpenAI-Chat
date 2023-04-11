@@ -1,5 +1,5 @@
 <h5 class="mb-4">Channels</h5>
-<ul class="listChat" *ngFor="let i of channels">
+<ul class="listChat" *ngFor="let i of _channel.array">
     <li class="listChat__item" [ngClass]="{active: i.id == _channel.idChannel}">
         <a (click)="changeChannel(i.id)" class="listChat__item-url">{{i.name}}</a>
     </li>

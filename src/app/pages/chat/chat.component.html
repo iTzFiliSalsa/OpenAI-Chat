@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <article class="row min-vh-100">
-        <aside class="col-2 group p-3">
+        <aside class="d-none d-sm-block col-sm-4 col-md-2 group p-3">
             <app-channels></app-channels>
         </aside>
-        <section class="col-10 chat p-0">
+        <section class="col-sm-8 col-md-10 chat p-0">
             <app-header></app-header>
             <section class="chat__historial">
                 <ng-container *ngFor="let i of messages">

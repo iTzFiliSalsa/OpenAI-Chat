@@ -1,3 +1,8 @@
-<nav class="d-flex align-items-center justify-content-end">
+<nav class="d-flex align-items-center justify-content-between justify-content-sm-end">
+    <ul class="navList d-flex d-sm-none align-items-center">
+        <ng-container *ngFor="let i of _channel.array">
+            <li class="navList-item"><a [ngClass]="{'fw-bold': i.id == _channel.idChannel}" (click)="changeChannel(i.id)">{{i.name}}</a></li>
+        </ng-container>
+    </ul>
     <img class="h-50" src="assets/img/logo.png" alt="Neoris Logo">
 </nav>
